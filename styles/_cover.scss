@@ -1,4 +1,9 @@
 //mobile and tablets
+@import 'variables';
+@function myColor($colorName)
+{
+    @return map-get($map: $colors, $key:$colorName );
+}
 main 
 {
     width: 100%;
@@ -12,12 +17,73 @@ main
             section
             {
                 width: 100%;
+                height: 100vh;
+                .sl-btn
+                {
+                    display: none;
+                }
+                .slide
+                {
+                    min-width: 100%;
+                    max-height: 100vh;
+                    height: 100%;
+                    background: linear-gradient(90deg,myColor(acent),myColor(acent1));
+                    transition: all 1s;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .sl-ig
+                    {
+                        width: 90%;
+                        padding-top: 100px;
+                        img 
+                        {
+                            width: 65%;
+                            margin: 0 15%;
+                        }
+                    }
+                    .sl-ct
+                    {
+                        width: 90%;
+                        h4 
+                        {
+                            font-size: 0.75rem;
+                            padding: 5px 10px;
+                            border-radius: 10px;
+                            margin: 0;
+                            color: myColor(font-3);
+                            background: myColor(shadow-2);
+                            width: 170px;
+                        }
+                        h2 
+                        {
+                            margin: 10px 0;
+                            color: myColor(font-3);
+                        }
+                        p 
+                        {
+                            margin: 10px 0 20px;
+                            color: myColor(font-3);
+                        }
+                        a 
+                        {
+                           
+                            background: myColor(font-3);
+                            padding: 10px;
+                            color: myColor(acent);
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .slide.slide:last-child
+                {
+                    background: linear-gradient(90deg,myColor(acent1),myColor(acent));
+                }
             }
         }
     }
 }
 //laptop and pc
-@media (min-width:700)
+@media (min-width:1000px)
 {
     main 
 {
@@ -32,6 +98,91 @@ main
             section
             {
                 width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .sl-btn
+                {
+                    display: flex;
+                    background: transparent;
+                    position: absolute;
+                    outline: none;
+                    border: 0;
+                    font-size: 2rem;
+                    color: myColor(font-3);
+                    cursor: pointer;z-index: 0;
+                }
+                .left-button
+                {
+                    left: 5%;
+                }
+                .right-button
+                {
+                    right: 5%;
+                }
+                .slide
+                {
+                    min-width: 80%;
+                    width: 100%;
+                    padding: 0;
+                    min-height: 100vh;
+                    background: linear-gradient(90deg,myColor(acent),myColor(acent1));
+                    transition: all 1s;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    .sl-ig
+                    {
+                        width: 40%;
+                        float: right;
+                        img 
+                        {
+                            width: 70%;
+                        }
+                    }
+                    .sl-ct
+                    {
+                        width: 40%;
+                        h4 
+                        {
+                            font-size: 1.5rem;
+                            padding: 10px 15px;
+                            border-radius: 10px;
+                            margin: 0;
+                            color: myColor(font-3);
+                            background: myColor(shadow-2);
+                            width: 350px;
+                        }
+                        h2 
+                        {
+                            margin: 20px 0;
+                            color: myColor(font-3);
+                            font-size: 2rem;
+                        }
+                        p 
+                        {
+                            margin: 20px 0 40px;
+                            color: myColor(font-3);
+                            font-size: 1.5rem;
+                        }
+                        a 
+                        {
+                           
+                            background: myColor(font-3);
+                            padding: 10px;
+                            color: myColor(acent);
+                            font-weight: 400;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .slide.slide:last-child
+                {
+                    background: linear-gradient(90deg,myColor(acent1),myColor(acent));
+                }
             }
         }
     }

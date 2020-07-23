@@ -5,19 +5,281 @@ html {
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
-header {
-  width: 100%;
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.32857em;
 }
 
-@media (min-width: 700) {
+h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.31667em;
+}
+
+h3 {
+  font-size: 1.20rem;
+  font-weight: 700;
+  line-height: 1.31111em;
+}
+
+p, a, label {
+  font-weight: 500;
+  color: myColor(font-2);
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: myColor(font-1);
+}
+
+a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: myColor(secondary);
+}
+
+header {
+  width: 100%;
+  background: white;
+  position: fixed;
+  height: 10vh;
+}
+
+header section {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header section .hd-lg {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header section .hd-lg img {
+  width: 50px;
+  margin-top: 10px;
+  height: 50px;
+}
+
+header section .hd-lg h1 {
+  color: #282C4E;
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+header section .hd-sc {
+  display: none;
+}
+
+header section .ht-nm {
+  width: 25%;
+  z-index: 2;
+}
+
+header section .ht-nm .menu, header section .ht-nm .change {
+  width: 50px;
+  margin: 1rem 0 0.5rem 0;
+  float: right;
+  background: transparent;
+  cursor: pointer;
+}
+
+header section .ht-nm .menu .bar, header section .ht-nm .change .bar {
+  width: 40px;
+  height: 5px;
+  margin: 5px;
+  background-color: #282C4E;
+}
+
+header section .ht-nm .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-1px, 4px);
+          transform: rotate(-45deg) translate(-1px, 4px);
+}
+
+header section .ht-nm .change .bar2 {
+  display: none;
+}
+
+header section .ht-nm .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-3px, -8px);
+          transform: rotate(45deg) translate(-3px, -8px);
+}
+
+header section .ht-nm .content, header section .ht-nm .show-nav {
+  width: 100%;
+  position: absolute;
+  height: 90vh;
+  background: #282C4E;
+  top: 10vh;
+  left: 100%;
+  -webkit-animation: outer 1s;
+          animation: outer 1s;
+  display: none;
+  z-index: 2;
+}
+
+header section .ht-nm .content ul, header section .ht-nm .show-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header section .ht-nm .content ul li, header section .ht-nm .show-nav ul li {
+  padding: 10px 0;
+  text-align: right;
+}
+
+header section .ht-nm .content ul li a, header section .ht-nm .show-nav ul li a {
+  padding: 10px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header section .ht-nm .show-nav {
+  display: block;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: intro 1s;
+          animation: intro 1s;
+  left: 0;
+}
+
+@-webkit-keyframes intro {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes intro {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes outer {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes outer {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
   header {
+    background: transparent;
+  }
+  header section {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header section .hd-lg {
+    width: 20%;
+  }
+  header section .hd-lg img {
+    width: 70px;
+    height: 70px;
+  }
+  header section .hd-lg h1 {
+    color: #282C4E;
+    margin: 0.75rem 0;
+  }
+  header section .hd-sc {
+    width: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header section .hd-sc img {
+    width: 25px;
+    padding: 5px;
+  }
+  header section .ht-nm {
+    width: 65%;
+    padding: 1rem 0;
+  }
+  header section .ht-nm .menu, header section .ht-nm .change {
+    display: none;
+  }
+  header section .ht-nm .content, header section .ht-nm .show-nav {
     width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-animation: none;
+            animation: none;
+    position: relative;
+    height: auto;
+    display: block;
+    background: transparent;
+  }
+  header section .ht-nm .content ul, header section .ht-nm .show-nav ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header section .ht-nm .content ul li, header section .ht-nm .show-nav ul li {
+    padding: 0;
+  }
+  header section .ht-nm .content ul li a, header section .ht-nm .show-nav ul li a {
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  header section .ht-nm .show-nav {
+    display: block;
   }
 }
 
@@ -35,9 +297,75 @@ main section .cover {
 
 main section .cover section {
   width: 100%;
+  height: 100vh;
 }
 
-@media (min-width: 700) {
+main section .cover section .sl-btn {
+  display: none;
+}
+
+main section .cover section .slide {
+  min-width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#48C140), to(#0073D0));
+  background: linear-gradient(90deg, #48C140, #0073D0);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .cover section .slide .sl-ig {
+  width: 90%;
+  padding-top: 100px;
+}
+
+main section .cover section .slide .sl-ig img {
+  width: 65%;
+  margin: 0 15%;
+}
+
+main section .cover section .slide .sl-ct {
+  width: 90%;
+}
+
+main section .cover section .slide .sl-ct h4 {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  width: 170px;
+}
+
+main section .cover section .slide .sl-ct h2 {
+  margin: 10px 0;
+  color: white;
+}
+
+main section .cover section .slide .sl-ct p {
+  margin: 10px 0 20px;
+  color: white;
+}
+
+main section .cover section .slide .sl-ct a {
+  background: white;
+  padding: 10px;
+  color: #48C140;
+  font-weight: 700;
+}
+
+main section .cover section .slide.slide:last-child {
+  background: -webkit-gradient(linear, left top, right top, from(#0073D0), to(#48C140));
+  background: linear-gradient(90deg, #0073D0, #48C140);
+}
+
+@media (min-width: 1000px) {
   main {
     width: 100%;
   }
@@ -49,6 +377,101 @@ main section .cover section {
   }
   main section .cover section {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section .cover section .sl-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: transparent;
+    position: absolute;
+    outline: none;
+    border: 0;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 0;
+  }
+  main section .cover section .left-button {
+    left: 5%;
+  }
+  main section .cover section .right-button {
+    right: 5%;
+  }
+  main section .cover section .slide {
+    min-width: 80%;
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    background: -webkit-gradient(linear, left top, right top, from(#48C140), to(#0073D0));
+    background: linear-gradient(90deg, #48C140, #0073D0);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main section .cover section .slide .sl-ig {
+    width: 40%;
+    float: right;
+  }
+  main section .cover section .slide .sl-ig img {
+    width: 70%;
+  }
+  main section .cover section .slide .sl-ct {
+    width: 40%;
+  }
+  main section .cover section .slide .sl-ct h4 {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 0;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    width: 350px;
+  }
+  main section .cover section .slide .sl-ct h2 {
+    margin: 20px 0;
+    color: white;
+    font-size: 2rem;
+  }
+  main section .cover section .slide .sl-ct p {
+    margin: 20px 0 40px;
+    color: white;
+    font-size: 1.5rem;
+  }
+  main section .cover section .slide .sl-ct a {
+    background: white;
+    padding: 10px;
+    color: #48C140;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  main section .cover section .slide.slide:last-child {
+    background: -webkit-gradient(linear, left top, right top, from(#0073D0), to(#48C140));
+    background: linear-gradient(90deg, #0073D0, #48C140);
   }
 }
 
@@ -93,15 +516,68 @@ main section {
 }
 
 main section .testimonials {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  background-image: url("../images/testimonial-cover.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 
 main section .testimonials section {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
 }
 
-@media (min-width: 700) {
+main section .testimonials section .ts-btn {
+  border: 0;
+  outline: none;
+  background: transparent;
+  width: 5%;
+}
+
+main section .testimonials section .ts-el {
+  width: 80%;
+  padding: 5%;
+}
+
+main section .testimonials section .ts-el .ts-tl {
+  text-align: center;
+}
+
+main section .testimonials section .ts-el .ts-tl h4, main section .testimonials section .ts-el .ts-tl h2 {
+  margin: 10px 0;
+}
+
+main section .testimonials section .ts-el .ts-bc {
+  background: white;
+  padding: 10px;
+  text-align: justify;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+main section .testimonials section .ts-el .ts-if {
+  text-align: center;
+}
+
+main section .testimonials section .ts-el .ts-if h3, main section .testimonials section .ts-el .ts-if p {
+  margin: 10px 0;
+}
+
+@media (min-width: 700px) {
   main {
     width: 100%;
   }
@@ -110,9 +586,54 @@ main section .testimonials section {
   }
   main section .testimonials {
     width: 100%;
+    min-height: 50vh;
+    height: auto;
+    background-size: 100%;
   }
   main section .testimonials section {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px 0;
+  }
+  main section .testimonials section .ts-btn {
+    border: 0;
+    outline: none;
+    background: transparent;
+    width: 5%;
+  }
+  main section .testimonials section .ts-el {
+    width: 30%;
+    padding: 5%;
+  }
+  main section .testimonials section .ts-el .ts-tl {
+    text-align: center;
+  }
+  main section .testimonials section .ts-el .ts-tl h4, main section .testimonials section .ts-el .ts-tl h2 {
+    margin: 10px 0;
+  }
+  main section .testimonials section .ts-el .ts-bc {
+    background: white;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  main section .testimonials section .ts-el .ts-if {
+    text-align: center;
+  }
+  main section .testimonials section .ts-el .ts-if h3, main section .testimonials section .ts-el .ts-if p {
+    margin: 10px 0;
   }
 }
 
@@ -462,5 +983,9 @@ footer section .ft-by-bm .ft-ca a p {
   footer section .ft-by-bm .ft-ca a p {
     margin: 0;
   }
+}
+
+.overflow {
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */

@@ -12,34 +12,30 @@
         <!-- header body -->
         <section>
             <div class="hd-lg">
-                <img src="images/alr.png" alt="">
-            </div>
-            <div class="hd-tt">
+                <img src="images/grd logo.png" alt="">
                 <h1>SkyNet</h1>
             </div>
             <div class="ht-nm">
-                <div class="menu">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+                <div class="menu" id="menu" onclick="showNav()">
+                    <div class="bar1 bar"></div>
+                    <div class="bar2 bar"></div>
+                    <div class="bar3 bar"></div>
                 </div>
-                <div class="content">
+                <div class="content" id="content">
                     <ul>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Offers</a></li>
-                        <li><a href="">Pricing</a></li>
-                        <li><a href="">Clients</a></li>
-                        <li><a href="">Testimonial</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="" onclick="showNav()">Services</a></li>
+                        <li><a href="" onclick="showNav()">About Us</a></li>
+                        <li><a href="" onclick="showNav()">Offers</a></li>
+                        <li><a href="" onclick="showNav()">Pricing</a></li>
+                        <li><a href="" onclick="showNav()">Clients</a></li>
+                        <li><a href="" onclick="showNav()">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="hd-sc">
                 <a href=""><img src="images/facebook.png" alt=""></a>
-                <a href=""><img src="images/linkedin.png" alt=""></a>
-                <a href=""><img src="images/twitter.png" alt=""></a>
-                <a href=""><img src="images/youtube.png" alt=""></a>
+                <a href=""><img src="images/instagram.png" alt=""></a>
+                <a href=""><img src="images/what's app.png" alt=""></a>
             </div>
         </section>
     </header>
@@ -48,7 +44,30 @@
             <div class="cover">
                 <!-- cover body -->
                 <section>
-
+                    <button class="left-button sl-btn" onclick="plusDivs2(-1)">&#10094;</button>
+                    <div class="slide">
+                        <div class="sl-ig">
+                            <img src="images/gradientslider3.png" alt="">
+                        </div>
+                        <div class="sl-ct">
+                            <h4>ALR Internet Service Provider</h4>
+                            <h2>Get Fastest Internet Speed With FTTH @ your Suitable Planed Budget</h2>
+                            <p>Get 150 mbps Speed With 650 GB/Month @ Rs. 1200</p>
+                            <a href="">Contact Now</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="sl-ig">
+                            <img src="images/gradientslider2.png" alt="">
+                        </div>
+                        <div class="sl-ct">
+                            <h4>ALR Internet Service Provider</h4>
+                            <h2>Switch To ALR Internet Service For Fast Connection With Affordable Price</h2>
+                            <p>Get 150 mbps Speed With 650 GB/Month @ Rs. 1120</p>
+                            <a href="">Contact Now</a>
+                        </div>
+                    </div>
+                    <button class="right-button  sl-btn" onclick="plusDivs2(1)">&#10095;</button>
                 </section>
             </div>
             <div class="services">
@@ -60,6 +79,38 @@
             <div class="testimonials">
                 <!-- testimonial body -->
                 <section>
+                    <button class="left-button ts-btn" onclick="plusDivs(-1)">&#10094;</button>
+                    <div class="ts-el">
+                        <div class="ts-tl">
+                            <img src="" alt="">
+                            <h4>Testimonials</h4>
+                            <h2>What Our Clients Say</h2>
+                        </div>
+                        <div class="ts-bc">
+                            <img src="" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error? Omnis ullam asperiores, accusamus ad facere molestias enim rem accusantium eveniet sit, magnam quisquam harum ipsam quos ab neque magni!</p>
+                        </div>
+                        <div class="ts-if">
+                            <h3>Name</h3>
+                            <p>Developer</p>
+                        </div>
+                    </div>
+                    <div class="ts-el">
+                        <div class="ts-tl">
+                            <img src="" alt="">
+                            <h4>Testimonials</h4>
+                            <h2>What Our Clients Say</h2>
+                        </div>
+                        <div class="ts-bc">
+                            <img src="" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, error? Omnis ullam asperiores, accusamus ad facere molestias enim rem accusantium eveniet sit, magnam quisquam harum ipsam quos ab neque magni!</p>
+                        </div>
+                        <div class="ts-if">
+                            <h3>Name 2</h3>
+                            <p>Developer 2</p>
+                        </div>
+                    </div>
+                    <button class="right-button  ts-btn" onclick="plusDivs(1)">&#10095;</button>
 
                 </section>
             </div>
@@ -130,10 +181,9 @@
                     <h3>Let's Connect!</h3>
                     <p>Connact with enterpreneurs, build your network,make great business.</p>
                     <div class="sc-ic">
-                        <a href=""><img src="images/facebook.png" alt=""></a>
-                        <a href=""><img src="images/linkedin.png" alt=""></a>
-                        <a href=""><img src="images/twitter.png" alt=""></a>
-                        <a href=""><img src="images/youtube.png" alt=""></a>
+                        <a href=""><img src="images/facebook.png" alt="" ></a>
+                        <a href=""><img src="images/instagram.png" alt=""></a>
+                        <a href=""><img src="images/what's app.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -148,5 +198,55 @@
             </div>
         </section>
     </footer>
+    <script>
+        var slideIndex2 = 1;
+        showDivs2(slideIndex2);
+        function plusDivs2(n) 
+        {
+          showDivs2(slideIndex2 += n);
+        }
+        function showDivs2(n) 
+        {
+          var i;
+          var x = document.getElementsByClassName("slide");
+          if (n > x.length) {slideIndex2 = 1}
+          if (n < 1) {slideIndex2 = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex2-1].style.display = "flex";  
+        }
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) 
+        {
+          showDivs(slideIndex += n);
+        }
+        function showDivs(n) 
+        {
+          var i;
+          var x = document.getElementsByClassName("ts-el");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() 
+        {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "flex"; 
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+          }
+    </script>
 </body>
 </html>

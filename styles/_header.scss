@@ -1,13 +1,219 @@
 //mobile and tablets
+@import 'variables';
+@function myColor($colorName)
+{
+    @return map-get($map: $colors, $key:$colorName );
+}
 header 
 {
     width: 100%;
+    background: myColor(font-3);
+    position: fixed;
+    height: 10vh;
+    section
+    {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        .hd-lg
+        {
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            img
+            {
+                width: 50px;
+                margin-top: 10px;
+                height: 50px;
+            }
+            h1
+            {
+                color: myColor(primary);
+                text-align: center;
+                margin: 0.5rem 0;
+                font-size: 2rem;
+            }
+        }
+        .hd-sc
+        {
+            display: none;
+        }
+        .ht-nm
+        {
+            width: 25%;
+            z-index: 2;
+            .menu,.change
+            {
+                width: 50px;
+                margin: 1rem 0 0.5rem 0;
+                float: right;
+                background: transparent;
+                cursor: pointer;
+                .bar 
+                {
+                    width: 40px;
+                    height: 5px;
+                    margin: 5px;
+                    background-color: myColor(primary);
+                }
+            }
+            .change
+            {
+                .bar1
+                {
+                    transform: rotate(-45deg) translate(-1px,4px);
+                }
+                .bar2
+                {
+                    display: none;
+                }
+                .bar3
+                {
+                    transform: rotate(45deg) translate(-3px,-8px);
+                }
+            }
+            .content,.show-nav
+            {
+                width: 100%;
+                position: absolute;
+                height: 90vh;
+                background: myColor(primary);
+                top: 10vh;
+                left: 100%;
+                animation: outer 1s;
+                display: none;
+                z-index: 2;
+                ul 
+                {
+                    list-style-type: none;
+                    padding: 0;
+                    li 
+                    {
+                        padding: 10px 0;
+                        text-align: right;
+                        a
+                        {
+                            padding: 10px;
+                            color: myColor(font-3);
+                            font-size: 2rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .show-nav
+            {
+                display: block;
+                transition: 1s;
+                animation: intro 1s;
+                left: 0;
+            }
+        }
+    }
 }
 //laptop and pc
-@media (min-width:700)
+@keyframes intro
+{
+    from 
+    {
+        left: 100%;
+    }
+    to 
+    {
+        left: 0;
+    }
+}
+@keyframes outer
+{
+    from 
+    {
+        left: 0;
+    }
+    to 
+    {
+        left: 100%;
+    }
+}
+@media (min-width:1000px)
 {
     header 
-{
-    width: 100%;
-}
+    {
+        background: transparent;
+        section
+        {
+            
+            justify-content: flex-end;
+            .hd-lg
+            {
+                width: 20%;
+                img
+                {
+                    width: 70px;
+                    height: 70px;
+                }
+                h1
+                {
+                    color: myColor(primary);
+                    margin: 0.75rem 0;
+                }
+            }
+            .hd-sc
+            {
+                width: 15%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                img 
+                {
+                    width: 25px;
+                    padding: 5px;
+                }
+            }
+            .ht-nm
+            {
+                width: 65%;
+                padding: 1rem 0;
+                .menu,.change
+                {
+                    display: none;
+                }
+                .content,.show-nav
+                {
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    animation: none;
+                    position: relative;
+                    height: auto;
+                    display: block;
+                    background: transparent;
+                    ul 
+                    {
+                        list-style-type: none;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-end;
+                        li 
+                        {
+                            padding: 0;
+                            a
+                            {
+                                padding: 10px;
+                                color: myColor(font-3);
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .show-nav
+                {
+                    display: block;
+                }
+            }
+        }
+    }
 }

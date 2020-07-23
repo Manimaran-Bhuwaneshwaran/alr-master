@@ -1,4 +1,9 @@
 //mobile and tablets
+@import 'variables';
+@function myColor($colorName)
+{
+    @return map-get($map: $colors, $key:$colorName );
+}
 main 
 {
     width: 100%;
@@ -7,18 +12,64 @@ main
         width: 100%;
         .testimonials
         {
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
             //code goes here
+            background-image: url("../images/testimonial-cover.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
             section
             {
-                width: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 0;
+                .ts-btn
+                {
+                    border: 0;
+                    outline: none;
+                    background: transparent;
+                    width: 5%;
+                }
+                .ts-el
+                {
+                    width: 80%;
+                    padding: 5%;
+                    .ts-tl
+                    {
+                        text-align: center;
+                        h4,h2
+                        {
+                            margin: 10px 0;
+                        }
+                    }
+                    .ts-bc
+                    {
+                        background: myColor(font-3);
+                        padding: 10px;
+                        text-align: justify;
+                        border-radius: 5px;
+                        color: myColor(font-2);
+                    }
+                    .ts-if
+                    {
+                        text-align: center;
+                        h3,p
+                        {
+                            margin: 10px 0;
+                        }
+                    }
+                }
             }
         }
     }
 }
 //laptop and pc
-@media (min-width:700)
+@media (min-width:700px)
 {
     main 
 {
@@ -29,10 +80,55 @@ main
         .testimonials
         {
             width: 100%;
+            min-height: 50vh;
+            height: auto;
+            background-size: 100%;
             //code goes here
             section
             {
-                width: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 100px 0;
+                .ts-btn
+                {
+                    border: 0;
+                    outline: none;
+                    background: transparent;
+                    width: 5%;
+                }
+                .ts-el
+                {
+                    width: 30%;
+                    padding: 5%;
+                    .ts-tl
+                    {
+                        text-align: center;
+                        h4,h2
+                        {
+                            margin: 10px 0;
+                        }
+                    }
+                    .ts-bc
+                    {
+                        background: myColor(font-3);
+                        padding: 10px;
+                        text-align: justify;
+                        border-radius: 5px;
+                        color: myColor(font-2);
+                    }
+                    .ts-if
+                    {
+                        text-align: center;
+                        h3,p
+                        {
+                            margin: 10px 0;
+                        }
+                    }
+                }
             }
         }
     }
