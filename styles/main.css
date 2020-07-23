@@ -1,0 +1,204 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .cover {
+  width: 100%;
+}
+
+main section .cover section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .cover {
+    width: 100%;
+  }
+  main section .cover section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .services {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .services section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .services {
+    width: 100%;
+  }
+  main section .services section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .testimonials {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .testimonials section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .testimonials {
+    width: 100%;
+  }
+  main section .testimonials section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .about {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .about section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .about {
+    width: 100%;
+  }
+  main section .about section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .pricing {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .pricing section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .pricing {
+    width: 100%;
+  }
+  main section .pricing section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .contact {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .contact section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .contact {
+    width: 100%;
+  }
+  main section .contact section {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

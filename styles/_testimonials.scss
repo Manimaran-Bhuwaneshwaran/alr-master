@@ -1,1 +1,40 @@
-
+//mobile and tablets
+main 
+{
+    width: 100%;
+    section 
+    {
+        width: 100%;
+        .testimonials
+        {
+            width: 90%;
+            margin: 0 auto;
+            //code goes here
+            section
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+//laptop and pc
+@media (min-width:700)
+{
+    main 
+{
+    width: 100%;
+    section 
+    {
+        width: 100%;
+        .testimonials
+        {
+            width: 100%;
+            //code goes here
+            section
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+}
