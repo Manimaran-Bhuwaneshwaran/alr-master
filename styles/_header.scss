@@ -1,1 +1,13 @@
-
+//mobile and tablets
+header 
+{
+    width: 100%;
+}
+//laptop and pc
+@media (min-width:700)
+{
+    header 
+{
+    width: 100%;
+}
+}

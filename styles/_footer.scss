@@ -1,1 +1,13 @@
-
+//mobile and tablets
+footer
+{
+    width: 100%;
+}
+//laptop and pc
+@media (min-width:700)
+{
+    footer 
+{
+    width: 100%;
+}
+}

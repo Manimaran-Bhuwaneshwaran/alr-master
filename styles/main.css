@@ -11,6 +11,16 @@ a {
   text-decoration: none;
 }
 
+header {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  header {
+    width: 100%;
+  }
+}
+
 main {
   width: 100%;
 }
@@ -198,6 +208,16 @@ main section .contact section {
     width: 100%;
   }
   main section .contact section {
+    width: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  footer {
     width: 100%;
   }
 }
