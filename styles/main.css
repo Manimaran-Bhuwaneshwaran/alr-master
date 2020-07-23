@@ -124,6 +124,38 @@ main section {
   width: 100%;
 }
 
+main section .offers {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .offers section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .offers {
+    width: 100%;
+  }
+  main section .offers section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
 main section .about {
   width: 90%;
   margin: 0 auto;
@@ -144,6 +176,38 @@ main section .about section {
     width: 100%;
   }
   main section .about section {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+}
+
+main section .clients {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .clients section {
+  width: 100%;
+}
+
+@media (min-width: 700) {
+  main {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+  }
+  main section .clients {
+    width: 100%;
+  }
+  main section .clients section {
     width: 100%;
   }
 }
