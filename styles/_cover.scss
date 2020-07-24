@@ -17,15 +17,14 @@ main
             section
             {
                 width: 100%;
-                height: 100vh;
-                .sl-btn
+                height: 90vh;
+                .slide-nav
                 {
                     display: none;
                 }
                 .slide
                 {
                     min-width: 100%;
-                    max-height: 100vh;
                     height: 100%;
                     background: linear-gradient(90deg,myColor(acent),myColor(acent1));
                     transition: all 1s;
@@ -34,11 +33,11 @@ main
                     .sl-ig
                     {
                         width: 90%;
-                        padding-top: 100px;
+                        padding-top: 10px;
                         img 
                         {
-                            width: 65%;
-                            margin: 0 15%;
+                            width: 50%;
+                            margin: 0 25%;
                         }
                     }
                     .sl-ct
@@ -71,10 +70,17 @@ main
                             padding: 10px;
                             color: myColor(acent);
                             font-weight: 700;
+                            cursor: pointer;
+                        }
+                        a:hover
+                        {
+                            background:myColor(hover);
+                            color:myColor(font-3);
+                            border: 1px solid myColor(font-3);
                         }
                     }
                 }
-                .slide.slide:last-child
+                .slide2
                 {
                     background: linear-gradient(90deg,myColor(acent1),myColor(acent));
                 }
@@ -102,31 +108,32 @@ main
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                .sl-btn
+                .slide-nav
                 {
                     display: flex;
-                    background: transparent;
+                    cursor: pointer;
+                    top: 90%;
+                    left: 47%;
                     position: absolute;
-                    outline: none;
-                    border: 0;
-                    font-size: 2rem;
-                    color: myColor(font-3);
-                    cursor: pointer;z-index: 0;
-                }
-                .left-button
-                {
-                    left: 5%;
-                }
-                .right-button
-                {
-                    right: 5%;
+                    .dot
+                    {
+                        width: 10px;
+                        height: 10px;
+                        margin: 5px;
+                        border-radius: 50%;
+                        background: myColor(font-3);
+                        cursor: pointer;
+                    }
+                    .dot:hover
+                    {
+                        background: myColor(font-2);
+                    }
                 }
                 .slide
                 {
                     min-width: 80%;
                     width: 100%;
                     padding: 0;
-                    min-height: 100vh;
                     background: linear-gradient(90deg,myColor(acent),myColor(acent1));
                     transition: all 1s;
                     display: flex;
@@ -179,7 +186,7 @@ main
                         }
                     }
                 }
-                .slide.slide:last-child
+                .slide2
                 {
                     background: linear-gradient(90deg,myColor(acent1),myColor(acent));
                 }

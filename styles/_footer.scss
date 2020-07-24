@@ -9,6 +9,7 @@ footer
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     background: myColor(primary);
+    
     section 
     {
         width: 90%;
@@ -16,16 +17,17 @@ footer
         .ft-by-tp
         {
             width: 100%;
+            display: flex;
+            flex-wrap: wrap;
             .ft-el
             {
-                width: 90%;
-                text-align: center;
-                padding: 5%;
-                img 
+                width: 95%;
+                padding: 2.5%;
+                h1 
                 {
-                    width: 50%;
-                    max-width: 200px;
-                    margin: 0 auto;
+                    margin: 1rem 0;
+                    text-align: center;
+                    color: myColor(font-3);
                 }
                 h3,p 
                 {
@@ -54,7 +56,11 @@ footer
                         a 
                         {
                             color: myColor(font-4);
-                            padding-left: 10px;
+                        }
+                        a:hover 
+                        {
+                            transition: 0.5s;
+                            color: myColor(hover);
                         }
                     }
                 }
@@ -78,7 +84,15 @@ footer
                             padding: 5px;
                         }
                     }
+                    a:hover
+                    {
+                        background:myColor(hover);
+                    }
                 }
+            }
+            .ft-li
+            {
+                width: 45%;
             }
         }
         .ft-sp
@@ -110,6 +124,11 @@ footer
                     {
                         color: myColor(font-3);
                     }
+                    p:hover 
+                    {
+                        transition: 0.5s;
+                        color: myColor(hover);
+                    }
                 }
             }
         }
@@ -133,7 +152,7 @@ footer
             {
                 width: 20%;
                 text-align: center;
-                padding: 2%;
+                padding: 2.5%;
                 margin: 0;
                 img 
                 {
@@ -176,7 +195,16 @@ footer
             }
             .ft-el:first-child
             {
-                width: 40%;
+               flex-grow: 3;
+            }
+            .ft-el:last-child
+            {
+                flex-grow: 1;
+            }
+            .ft-li
+            {
+                width: 20%;
+                max-width: 150px;
             }
         }
         .ft-sp

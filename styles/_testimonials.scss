@@ -15,9 +15,8 @@ main
             width: 100%;
             //code goes here
             background-image: url("../images/testimonial-cover.png");
-            background-attachment: fixed;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top;
             min-height: 100vh;
             section
             {
@@ -34,6 +33,7 @@ main
                     outline: none;
                     background: transparent;
                     width: 5%;
+                    cursor: pointer;
                 }
                 .ts-el
                 {
@@ -82,7 +82,8 @@ main
             width: 100%;
             min-height: 50vh;
             height: auto;
-            background-size: 100%;
+            background-size: 100% 100%;
+            background-attachment: fixed;
             //code goes here
             section
             {
@@ -98,11 +99,12 @@ main
                     border: 0;
                     outline: none;
                     background: transparent;
-                    width: 5%;
+                    width: 20px;
                 }
                 .ts-el
                 {
-                    width: 30%;
+                    width: 20%;
+                    min-width: 300px;
                     padding: 5%;
                     .ts-tl
                     {
@@ -128,6 +130,11 @@ main
                             margin: 10px 0;
                         }
                     }
+                }
+                .ts-btn:hover
+                {
+                    border-radius: 5px;
+                    box-shadow: 0 0 2px 2px rgba(0,0,0,0.5);
                 }
             }
         }

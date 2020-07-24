@@ -8,19 +8,26 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <header>
+    <header id="head">
         <!-- header body -->
         <section>
             <div class="hd-lg">
                 <img src="images/grd logo.png" alt="">
                 <h1>SkyNet</h1>
             </div>
-            <div class="ht-nm">
+            <div class="hd-cc">
+                <div class="hd-sc">
+                    <a href=""><img src="images/facebook.png" alt=""></a>
+                    <a href=""><img src="images/instagram.png" alt=""></a>
+                    <a href=""><img src="images/what's app.png" alt=""></a>
+                </div>
                 <div class="menu" id="menu" onclick="showNav()">
                     <div class="bar1 bar"></div>
                     <div class="bar2 bar"></div>
                     <div class="bar3 bar"></div>
                 </div>
+            </div>
+            <div class="ht-nm">
                 <div class="content" id="content">
                     <ul>
                         <li><a href="" onclick="showNav()">Services</a></li>
@@ -32,11 +39,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="hd-sc">
-                <a href=""><img src="images/facebook.png" alt=""></a>
-                <a href=""><img src="images/instagram.png" alt=""></a>
-                <a href=""><img src="images/what's app.png" alt=""></a>
-            </div>
         </section>
     </header>
     <main>
@@ -44,7 +46,6 @@
             <div class="cover">
                 <!-- cover body -->
                 <section>
-                    <button class="left-button sl-btn" onclick="plusDivs2(-1)">&#10094;</button>
                     <div class="slide">
                         <div class="sl-ig">
                             <img src="images/gradientslider3.png" alt="">
@@ -56,7 +57,7 @@
                             <a href="">Contact Now</a>
                         </div>
                     </div>
-                    <div class="slide">
+                    <div class="slide slide2">
                         <div class="sl-ig">
                             <img src="images/gradientslider2.png" alt="">
                         </div>
@@ -67,7 +68,10 @@
                             <a href="">Contact Now</a>
                         </div>
                     </div>
-                    <button class="right-button  sl-btn" onclick="plusDivs2(1)">&#10095;</button>
+                    <div class="slide-nav">
+                        <div class="dot" onclick="showslide(0)"></div>
+                        <div class="dot" onclick="showslide(1)"></div>
+                    </div>
                 </section>
             </div>
             <div class="services">
@@ -111,7 +115,6 @@
                         </div>
                     </div>
                     <button class="right-button  ts-btn" onclick="plusDivs(1)">&#10095;</button>
-
                 </section>
             </div>
             <div class="offers">
@@ -151,10 +154,10 @@
         <section>
             <div class="ft-by-tp">
                 <div class="ft-el">
-                    <img src="images/alr.png" alt="">
+                    <h1>ALR</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, quisquam est? Aut perferendis obcaecati laudantium quam ullam vel optio! Qui.</p>
                 </div>
-                <div class="ft-el">
+                <div class="ft-el ft-li">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="">Services</a></li>
@@ -166,7 +169,7 @@
                         <li><a href="">Contact</a></li>
                     </ul>
                 </div>
-                <div class="ft-el">
+                <div class="ft-el ft-li">
                     <h3>Important Links</h3>
                     <p>
                         <ul>
@@ -193,29 +196,45 @@
                     <p>Copyright &copy; 2020 ALR</p>
                 </div>
                 <div class="ft-ca">
-                    <a href=""><p>Powered by BeeHome</p></a>
+                    <a href="https://beehome.in"><p>Powered by BeeHome</p></a>
                 </div>
             </div>
         </section>
     </footer>
     <script>
-        var slideIndex2 = 1;
-        showDivs2(slideIndex2);
-        function plusDivs2(n) 
-        {
-          showDivs2(slideIndex2 += n);
-        }
-        function showDivs2(n) 
+        
+        //custom cover slide
+        function showslide(n) 
         {
           var i;
           var x = document.getElementsByClassName("slide");
-          if (n > x.length) {slideIndex2 = 1}
-          if (n < 1) {slideIndex2 = x.length}
+          var dot=document.getElementsByClassName("dot");
           for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
+            x[i].style.display = "none";
+            dot[i].style.background="#fff";  
           }
-          x[slideIndex2-1].style.display = "flex";  
+          x[n].style.display = "flex";  
+          dot[n].style.background="#0f0";
         }
+        //cover auto slider
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() 
+        {
+            var i;
+            var dot=document.getElementsByClassName("dot");
+            var slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+              dot[i].style.background="#fff";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "flex"; 
+            dot[slideIndex-1].style.background="#0f0";
+            setTimeout(showSlides, 4000); 
+          }
+          //testimonial slider
         var slideIndex = 1;
         showDivs(slideIndex);
         function plusDivs(n) 
@@ -233,20 +252,6 @@
           }
           x[slideIndex-1].style.display = "block";  
         }
-        var slideIndex = 0;
-        showSlides();
-        function showSlides() 
-        {
-            var i;
-            var slides = document.getElementsByClassName("slide");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "flex"; 
-            setTimeout(showSlides, 5000); // Change image every 2 seconds
-          }
     </script>
 </body>
 </html>

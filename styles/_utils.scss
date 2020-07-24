@@ -41,8 +41,8 @@ a
     text-decoration: none;
     color: myColor(font-1);
 }
-a:hover
+a:hover 
 {
     transition: 0.5s;
-    color: myColor(secondary);
+    color: myColor(hover);
 }

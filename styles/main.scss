@@ -9,6 +9,11 @@
 @import 'pricing';
 @import 'contact';
 @import 'footer';
+@import 'variables';
+@function myColor($colorName)
+{
+    @return map-get($map: $colors, $key:$colorName );
+}
 .overflow
 {
     overflow: hidden;
