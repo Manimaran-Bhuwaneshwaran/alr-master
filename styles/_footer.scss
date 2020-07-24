@@ -106,10 +106,12 @@ footer
             width: 90%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
+            text-align: center;
             padding: 5%;
             .ft-cr
             {
+                width: 100%;
                 p
                 {
                     color: myColor(font-3);
@@ -118,6 +120,7 @@ footer
             }
             .ft-ca
             {
+                width: 100%;
                 a 
                 {
                     p
