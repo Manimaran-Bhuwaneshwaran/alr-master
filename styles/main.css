@@ -88,6 +88,8 @@ header section .hd-lg h1 {
   text-align: left;
   margin: 0;
   font-size: 2rem;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 500;
 }
 
 header section .hd-cc {
@@ -108,6 +110,16 @@ header section .hd-cc {
           flex-grow: 2;
 }
 
+header section .hd-cc .hd-tl {
+  width: 100%;
+  text-align: right;
+}
+
+header section .hd-cc .hd-tl a {
+  font-weight: 700;
+  color: #3B4FE4;
+}
+
 header section .hd-cc .hd-sc {
   width: 100%;
   display: -webkit-box;
@@ -121,6 +133,7 @@ header section .hd-cc .hd-sc {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 header section .hd-cc .hd-sc a {
@@ -138,6 +151,10 @@ header section .hd-cc .hd-sc a img {
 
 header section .hd-cc .hd-sc a:hover {
   background: #ff61b0;
+}
+
+header section .hd-cc .hd-sc .hd-mr {
+  display: none;
 }
 
 header section .hd-cc .menu, header section .hd-cc .change {
@@ -205,6 +222,10 @@ header section .ht-nm .content ul li a, header section .ht-nm .show-nav ul li a 
   color: #3B4FE4;
   font-size: 2rem;
   font-weight: 700;
+}
+
+header section .ht-nm .content ul #con-link, header section .ht-nm .show-nav ul #con-link {
+  display: none;
 }
 
 header section .ht-nm .show-nav {
@@ -278,10 +299,36 @@ header section .ht-nm .show-nav {
   header section .hd-cc {
     max-height: 50px;
   }
+  header section .hd-cc .hd-tl {
+    display: none;
+  }
   header section .hd-cc .hd-sc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  header section .hd-cc .hd-sc .hd-mr {
+    width: 83%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header section .hd-cc .hd-sc .hd-mr a {
+    background: transparent;
+    width: auto;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    color: #48C140;
+    font-weight: 500;
+  }
+  header section .hd-cc .hd-sc .hd-mr a:hover {
+    color: #ff61b0;
   }
   header section .hd-cc .menu, header section .hd-cc .change {
     display: none;
@@ -334,6 +381,10 @@ header section .ht-nm .show-nav {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #ff61b0;
+  }
+  header section .ht-nm .content ul #con-link, header section .ht-nm .show-nav ul #con-link {
+    display: block;
+    cursor: pointer;
   }
   header section .ht-nm .show-nav {
     display: block;
@@ -415,9 +466,10 @@ main section .cover section .slide .sl-ct p {
 }
 
 main section .cover section .slide .sl-ct a {
-  background: white;
+  border: 1px solid white;
+  background: transparent;
   padding: 10px;
-  color: #48C140;
+  color: white;
   font-weight: 700;
   cursor: pointer;
 }
@@ -531,9 +583,7 @@ main section .cover section .slide2 {
     font-size: 1.5rem;
   }
   main section .cover section .slide .sl-ct a {
-    background: white;
     padding: 10px;
-    color: #48C140;
     font-weight: 400;
     font-size: 1.5rem;
   }
@@ -572,6 +622,7 @@ main section .services section .new {
 }
 
 main section .services section .new button {
+  width: 100%;
   background: #3B4FE4;
   border: 0;
   padding: 10px 20px;
@@ -694,9 +745,13 @@ main section .services section .ser1 .ser .ft p {
   main section .services section .new {
     margin: 0 0 3% 0;
   }
+  main section .services section .new button {
+    width: 250px;
+    padding: 20px;
+  }
   main section .services section .list {
     background: white;
-    border: 1px solid #3B4FE4;
+    border: 0;
     border-bottom: 0;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -729,12 +784,12 @@ main section .services section .ser1 .ser .ft p {
     border-top: 0;
     padding: 5%;
     border-radius: 0 0 5px 5px;
+    border: 0;
   }
   main section .services section .ser1 .ser {
     margin: 0;
     padding: 0;
     border: 0;
-    border-top: 0;
     border-radius: 0 0 3px 3px;
     overflow: hidden;
     -webkit-box-shadow: none;
@@ -1006,20 +1061,22 @@ main section .offers-header {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
           clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
   min-height: 15vh;
-  background-color: #3B4FE4;
+  background-image: url("../images/offerscover.png");
 }
 
-main section .offers-header h2 {
+main section .offers-header h1 {
   color: white;
+  font-size: 2.558em;
+  padding-bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-align: justify;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main section .offers-content {
@@ -1075,7 +1132,7 @@ main section .offers-content .offers-content-img .offers-date p {
   text-align: center;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   main {
     width: 100%;
   }
@@ -1099,20 +1156,21 @@ main section .offers-content .offers-content-img .offers-date p {
   }
   main section .offers section .offers-header {
     width: 100%;
-    min-height: 10vh;
-    background-color: #3B4FE4;
+    height: 5vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 35% 100%, 0 30%);
+            clip-path: polygon(0 0, 100% 0, 100% 30%, 35% 100%, 0 30%);
+    background-image: url("../images/offerscover.png");
   }
-  main section .offers section .offers-header h2 {
+  main section .offers section .offers-header h1 {
     color: white;
+    font-size: 2.25rem;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    text-align: justify;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    text-align: left;
   }
   main section .offers section .offers-content {
     width: 90%;
@@ -1128,17 +1186,15 @@ main section .offers-content .offers-content-img .offers-date p {
             justify-content: center;
   }
   main section .offers section .offers-content .offers-content-img {
-    width: 28%;
+    width: 25%;
     margin: 0 2.5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    text-align: justify;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    text-align: right;
+    overflow: visible;
   }
   main section .offers section .offers-content .offers-content-img img {
     width: 100%;
@@ -1148,11 +1204,6 @@ main section .offers-content .offers-content-img .offers-date p {
     color: white;
     border: none;
     border-radius: 5px;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 120px;
     height: 50px;
     margin-top: -30px;
     -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
@@ -1161,7 +1212,8 @@ main section .offers-content .offers-content-img .offers-date p {
   main section .offers section .offers-content .offers-content-img .offers-date p {
     text-align: center;
     padding-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -1212,8 +1264,9 @@ main section .about section .about-header .alterbutton {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 120px;
-  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  padding: 5%;
   -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
           box-shadow: 2px 4px 6px 2px #c9c8c8;
 }
@@ -1306,7 +1359,8 @@ main section .about section .about-services .about-services-header .alterbutton 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 90%;
+  padding: 5%;
   -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
           box-shadow: 2px 4px 6px 2px #c9c8c8;
 }
@@ -1425,7 +1479,8 @@ main section .about section .about-services .alterbutton h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 120px;
+    width: 250px;
+    padding: 20px;
     -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
             box-shadow: 2px 4px 6px 2px #c9c8c8;
   }
@@ -1519,7 +1574,8 @@ main section .about section .about-services .alterbutton h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 270px;
+    width: 250px;
+    padding: 20px;
     margin: 0 auto;
     -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
             box-shadow: 2px 4px 6px 2px #c9c8c8;
@@ -1621,7 +1677,8 @@ main section .clients section .clients-header .alterbutton {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 90%;
+  padding: 5%;
   -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
           box-shadow: 2px 4px 6px 2px #c9c8c8;
 }
@@ -1691,7 +1748,7 @@ main section .clients section .clients-content button:hover {
   }
   main section .clients {
     width: 100%;
-    margin: 100px 0;
+    margin: 100px 0 0 0;
   }
   main section .clients section {
     width: 100%;
@@ -1712,8 +1769,9 @@ main section .clients section .clients-content button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
+    padding: 20px;
     -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
             box-shadow: 2px 4px 6px 2px #c9c8c8;
   }
@@ -1791,7 +1849,74 @@ main section .pricing section {
   width: 100%;
 }
 
-@media (min-width: 700) {
+main section .pricing section .pricing-cover {
+  width: 100%;
+}
+
+main section .pricing section .pricing-cover .pricing-content {
+  width: 90%;
+  padding: 5%;
+  padding-bottom: 0;
+  margin: 5% 0 0 0;
+  -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
+          box-shadow: 2px 4px 6px 2px #c9c8c8;
+}
+
+main section .pricing section .pricing-cover .pricing-content h2, main section .pricing section .pricing-cover .pricing-content h3, main section .pricing section .pricing-cover .pricing-content p {
+  margin: 0;
+}
+
+main section .pricing section .pricing-cover .pricing-content h2 {
+  padding: 10px 0;
+  text-align: center;
+}
+
+main section .pricing section .pricing-cover .pricing-content p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+main section .pricing section .pricing-cover .pricing-content p img {
+  width: 25px;
+  padding-right: 5px;
+}
+
+main section .pricing section .pricing-cover .pricing-content ul {
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+main section .pricing section .pricing-cover .pricing-content ul li {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 5px 0;
+}
+
+main section .pricing section .pricing-cover .pricing-content ul li h3, main section .pricing section .pricing-cover .pricing-content ul li p {
+  width: 120px;
+  text-align: left;
+}
+
+main section .pricing section .pricing-cover .pricing-content ul li p span {
+  padding: 0 10px;
+}
+
+main section .pricing section .pricing-cover .pricing-content ul li img {
+  float: right;
+  width: 25px;
+  padding-left: 25px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media (min-width: 700px) {
   main {
     width: 100%;
   }
@@ -1799,10 +1924,31 @@ main section .pricing section {
     width: 100%;
   }
   main section .pricing {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   main section .pricing section {
     width: 100%;
+  }
+  main section .pricing section .pricing-cover {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section .pricing section .pricing-cover .pricing-content {
+    min-width: 250px;
+    width: 14%;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 0;
+    -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
+            box-shadow: 2px 4px 6px 2px #c9c8c8;
   }
 }
 
@@ -1823,7 +1969,183 @@ main section .contact section {
   width: 100%;
 }
 
-@media (min-width: 700) {
+main section .contact section .contact-header {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .contact section .contact-header .alterbutton {
+  background-color: #3B4FE4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5% 0;
+  padding: 3px 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  padding: 5%;
+  -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
+          box-shadow: 2px 4px 6px 2px #c9c8c8;
+}
+
+main section .contact section .contact-header .alterbutton a h2 {
+  text-align: center;
+  color: white;
+}
+
+main section .contact section .contact-header .alterbutton a:hover {
+  cursor: pointer;
+}
+
+main section .modal {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  z-index: 5;
+}
+
+main section .modal .modal-content {
+  width: 80%;
+  margin: 10% auto;
+  background: white;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+main section .modal .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+main section .modal .modal-content .close:hover, main section .modal .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main section .modal .modal-content form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main section .modal .modal-content form .filelds {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+main section .modal .modal-content form .filelds h2 {
+  margin: 0;
+  color: #282C4E;
+  -webkit-transform: translateX(1);
+          transform: translateX(1);
+}
+
+main section .modal .modal-content form .filelds label {
+  width: 100%;
+  color: #282C4E;
+  font-weight: 700;
+  -webkit-transform: translateX(1);
+          transform: translateX(1);
+  font-size: 1rem;
+}
+
+main section .modal .modal-content form .filelds input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #282C4E;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: #282C4E;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  -webkit-transform: translateX(1);
+          transform: translateX(1);
+  background: transparent;
+}
+
+main section .modal .modal-content form .filelds button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3B4FE4;
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
+  -webkit-transform: translateX(1);
+          transform: translateX(1);
+  color: white;
+  margin-bottom: 20px;
+}
+
+main section .modal .modal-content form .filelds h2[data-scroll="out"], main section .modal .modal-content form .filelds label[data-scroll="out"], main section .modal .modal-content form .filelds input[data-scroll="out"] {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+main section .modal .modal-content form .filelds button[data-scroll="out"] {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+main section .modal .modal-content form .filelds ::-webkit-input-placeholder {
+  color: #282C4E;
+}
+
+main section .modal .modal-content form .filelds :-ms-input-placeholder {
+  color: #282C4E;
+}
+
+main section .modal .modal-content form .filelds ::-ms-input-placeholder {
+  color: #282C4E;
+}
+
+main section .modal .modal-content form .filelds ::placeholder {
+  color: #282C4E;
+}
+
+main section .modal .modal-content form .filelds ::-webkit-inner-spin-button {
+  display: none;
+}
+
+main section .modal .modal-content form .filelds div {
+  width: 100%;
+  margin: 10px auto;
+  height: 2px;
+  background: #282C4E;
+}
+
+@media (min-width: 700px) {
   main {
     width: 100%;
   }
@@ -1835,6 +2157,125 @@ main section .contact section {
   }
   main section .contact section {
     width: 100%;
+  }
+  main section .contact section .contact-header {
+    width: 270px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section .contact section .contact-header .alterbutton {
+    background-color: #3B4FE4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 250px;
+    margin: 10% auto;
+    padding: 20px;
+    -webkit-box-shadow: 2px 4px 6px 2px #c9c8c8;
+            box-shadow: 2px 4px 6px 2px #c9c8c8;
+  }
+  main section .contact section .contact-header .alterbutton a h2 {
+    text-align: center;
+    color: white;
+  }
+  main section .contact section .contact-header .alterbutton a:hover {
+    cursor: pointer;
+  }
+  main section .modal {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+  main section .modal .modal-content {
+    width: 400px;
+    padding: 20px;
+  }
+  main section .modal .modal-content .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  main section .modal .modal-content .close:hover, main section .modal .modal-content .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  main section .modal .modal-content form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main section .modal .modal-content form .filelds {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+  }
+  main section .modal .modal-content form .filelds h2 {
+    margin: 0;
+  }
+  main section .modal .modal-content form .filelds label {
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  main section .modal .modal-content form .filelds input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+  }
+  main section .modal .modal-content form .filelds button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3B4FE4;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  main section .modal .modal-content form .filelds button:hover {
+    cursor: pointer;
   }
 }
 
@@ -1952,33 +2393,18 @@ footer section .ft-sp {
 
 footer section .ft-by-bm {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
   padding: 5%;
-}
-
-footer section .ft-by-bm .ft-cr {
-  width: 100%;
 }
 
 footer section .ft-by-bm .ft-cr p {
   color: white;
+  text-align: center;
   margin: 0;
-}
-
-footer section .ft-by-bm .ft-ca {
-  width: 100%;
 }
 
 footer section .ft-by-bm .ft-ca a p {
   color: white;
+  text-align: center;
 }
 
 footer section .ft-by-bm .ft-ca a p:hover {
@@ -2065,6 +2491,7 @@ footer section .ft-by-bm .ft-ca a p:hover {
     min-height: 20px;
   }
   footer section .ft-by-bm .ft-cr {
+    width: auto;
     float: left;
   }
   footer section .ft-by-bm .ft-cr p {
@@ -2080,5 +2507,57 @@ footer section .ft-by-bm .ft-ca a p:hover {
 
 .overflow {
   overflow: hidden;
+}
+
+.elagent-btn {
+  display: inline;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B4FE4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff61b0;
+}
+
+.bk-tp {
+  width: 50px;
+  position: fixed;
+  right: 2px;
+  bottom: 2px;
+}
+
+.bk-tp img {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .bk-tp {
+    width: 70px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+  .bk-tp img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

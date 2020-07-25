@@ -13,29 +13,108 @@ main
             section
             {
                 width: 100%;
+                .pricing-cover
+                {
+                    width: 100%;
+                    .pricing-content
+                    {
+                        width: 90%;
+                        padding: 5%;  
+                        padding-bottom: 0;
+                        margin: 5% 0 0 0;                 
+                        box-shadow: 2px 4px 6px 2px rgb(201, 200, 200);
+                        h2,h3,p 
+                        {
+                            margin: 0;
+                        }
+                        h2 
+                        {
+                            padding: 10px 0;
+                            text-align: center;
+                        }
+                        p 
+                        {
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 5px 0;
+                            img 
+                            {
+                                width: 25px;
+                                padding-right: 5px;
+                            }
+                        }
+                        ul
+                        {
+                            list-style-type: none;
+                            padding: 0;
+                            cursor: pointer;
+                            li 
+                            {
+                                border: 1px solid rgba(0,0,0,0.3);
+                                border-left: 0;
+                                border-right: 0;
+                                border-bottom: 0;
+                                padding: 5px 0;
+                                h3,p 
+                                {
+                                    width: 120px;
+                                    text-align: left;
+                                }
+                                p 
+                                {
+                                    span 
+                                    {padding: 0 10px;}
+                                }
+                                img 
+                                {
+                                    float: right;
+                                    width: 25px;
+                                    padding-left: 25px;
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
-//laptop and pc
-@media (min-width:700)
+@media (min-width:700px)
 {
     main 
-{
-    width: 100%;
-    section 
     {
         width: 100%;
-        .pricing
+        section 
         {
             width: 100%;
-            //code goes here
-            section
+            .pricing
             {
-                width: 100%;
+                width: 90%;
+                margin: 0 auto;
+                //code goes here
+                section
+                {
+                    width: 100%;
+                    .pricing-cover
+                    {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        .pricing-content
+                        {
+                            min-width: 250px;  
+                            width: 14%;
+                            margin: 20px;  
+                            padding: 20px;  
+                            padding-bottom: 0;    
+                            box-shadow: 2px 4px 6px 2px rgb(201, 200, 200);
+                            
+                        }
+                    }
+                }
             }
         }
     }
 }
-}
-

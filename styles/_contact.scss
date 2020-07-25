@@ -13,12 +13,156 @@ main
             section
             {
                 width: 100%;
+                .contact-header
+                {
+                    width: 90%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .alterbutton
+                    {
+                        background-color:myColor(secondary);
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        margin: 5% 0;
+                        padding: 3px 0;
+                        text-align: center;
+                        justify-content: center;
+                        width: 90%;
+                        padding: 5%;                                                                      
+                        a
+                        {
+                            h2
+                            {
+                                text-align: center;
+                                color: white;
+                            }                                                     
+                        }                                                                      
+                        a:hover
+                        {
+                            cursor: pointer;
+                        } 
+                        box-shadow: 2px 4px 6px 2px rgb(201, 200, 200);                        
+                    }
+                }
+            }
+        }
+        .modal
+        {
+            width: 100%;
+            background: myColor(shadow-1);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            display: none;
+            z-index: 5;
+            .modal-content
+            {
+                width: 80%;
+                margin: 10% auto;
+                background: myColor(font-3);
+                border-radius: 10px;
+                padding: 5%;
+                .close 
+                {
+                    color: #aaaaaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                .close:hover,.close:focus 
+                {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                form 
+                {
+                    width: 90%;
+                    margin: 0 auto;
+                    .filelds
+                    {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 15px;
+                        h2 
+                        {
+                            margin: 0;
+                            color: myColor(primary);
+                            transform: translateX(1);
+                        }
+                        label 
+                        {
+                            width: 100%;
+                            color: myColor(primary);
+                            font-weight: 700;
+                            transform: translateX(1);
+                            font-size: 1rem;
+                        }
+                        input 
+                        {
+                            width: 100%;
+                            padding: 10px 15px;
+                            border: 1px solid myColor(primary);
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            color: myColor(primary);
+                            font-weight: 500;
+                            font-size: 1rem;
+                            outline: none;
+                            transform: translateX(1);
+                            background: transparent;
+                        }
+                        button 
+                        {
+                            width: 100%;
+                            padding: 12px;
+                            border: none;
+                            border-radius: 5px;
+                            background-color: myColor(secondary);
+                            color: myColor(font-1);
+                            font-weight: 700;
+                            font-size: 1rem;
+                            transform: translateX(1);
+                            color: myColor(font-3);
+                            margin-bottom: 20px;
+                        }
+                        h2[data-scroll="out"],label[data-scroll="out"],input[data-scroll="out"]
+                        {
+                            transform: scaleX(1);
+                        }
+                        button[data-scroll="out"]
+                        {
+                            transform: translateX(0);
+                        }
+                        ::placeholder
+                        {
+                            color: myColor(primary);
+                        }
+                        ::-webkit-inner-spin-button
+                        {
+                            display: none;
+                        }
+                        div 
+                        {
+                            width: 100%;
+                            margin: 10px auto;
+                            height: 2px;
+                            background: myColor(primary);
+                        }
+                    }
+                }
             }
         }
     }
 }
 //laptop and pc
-@media (min-width:700)
+@media (min-width:700px)
 {
     main 
 {
@@ -33,6 +177,122 @@ main
             section
             {
                 width: 100%;
+                .contact-header
+                {
+                    width: 270px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .alterbutton
+                    {
+                        background-color:myColor(secondary);
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        text-align: center;
+                        justify-content: center;
+                        width: 250px;   
+                        margin: 10% auto; 
+                        padding: 20px; 
+                        a
+                        {
+                            h2
+                            {
+                                text-align: center;
+                                color: white;
+                            }                                                    
+                        }                                                                      
+                        a:hover
+                        {
+                            cursor: pointer;
+                        }   
+                        box-shadow: 2px 4px 6px 2px rgb(201, 200, 200);                        
+                    }
+                }
+            }
+        }
+        .modal
+        {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            display: none;
+            .modal-content
+            {
+                width: 400px;
+                padding: 20px;
+                .close 
+                {
+                    color: #aaaaaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                .close:hover,.close:focus 
+                {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                form 
+                {
+                    width: 90%;
+                    margin: 0 auto;
+                    .filelds
+                    {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 15px;
+                        h2 
+                        {
+                            margin: 0;
+                        }
+                        label 
+                        {
+                            width: 100%;
+                            
+                            font-weight: 700;
+                            font-size: 1rem;
+                        }
+                        input 
+                        {
+                            width: 100%;
+                            padding: 10px 15px;
+                            
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            font-weight: 500;
+                            font-size: 1rem;
+                            outline: none;
+                            background: transparent;
+                        }
+                        
+                        button 
+                        {
+                            width: 100%;
+                            padding: 12px;
+                            border: none;
+                            border-radius: 5px;
+                            background-color: myColor(secondary);
+                            color: myColor(font-1);
+                            font-weight: 700;
+                            font-size: 1rem;
+                            color: myColor(font-3);
+                            margin-bottom: 20px;
+                            outline: none;
+                        }
+                        button:hover
+                        {
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }

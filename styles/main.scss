@@ -18,3 +18,58 @@
 {
     overflow: hidden;
 }
+.elagent-btn
+{
+    display: inline;
+    text-align: center;
+    margin: auto;
+    color: myColor(font-3);
+}
+::-webkit-scrollbar 
+{
+width: 10px;
+border-radius: 5px;
+}
+::-webkit-scrollbar:hover
+{
+width: 10px;
+}
+::-webkit-scrollbar-track 
+{
+background: transparent; 
+border-radius: 5px;
+}
+::-webkit-scrollbar-thumb 
+{
+background: myColor(secondary); 
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+background: myColor(hover); 
+}
+.bk-tp
+{
+    width: 50px;
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+    img 
+    {
+        width: 100%;
+    }
+}
+@media(min-width:700px)
+{
+    .bk-tp
+    {
+        width: 70px;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        img 
+        {
+            width: 100%;
+        }
+    }
+}

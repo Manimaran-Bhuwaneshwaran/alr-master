@@ -36,6 +36,8 @@ header
                 text-align: left;
                 margin: 0;
                 font-size: 2rem;
+                font-family: 'Russo One', sans-serif;
+                font-weight: 500;
             }
         }
         .hd-cc
@@ -46,6 +48,16 @@ header
             justify-content: flex-end;
             align-items: center;
             flex-grow: 2;
+            .hd-tl
+            {
+                width: 100%;
+                text-align: right;
+                a 
+                {
+                    font-weight: 700;
+                    color: myColor(secondary);
+                }
+            }
             .hd-sc
             {
                 width: 100%;
@@ -53,6 +65,7 @@ header
                 flex-wrap: wrap;
                 justify-content: flex-end;
                 align-items: center;
+                display: none;
                 a 
                 {
                     background: myColor(secondary);
@@ -69,6 +82,10 @@ header
                 a:hover
                 {
                     background:myColor(hover);
+                }
+                .hd-mr
+                {
+                    display: none;
                 }
             }
             .menu,.change
@@ -135,6 +152,10 @@ header
                             font-size: 2rem;
                             font-weight: 700;
                         }
+                    }
+                    #con-link
+                    {
+                        display: none;
                     }
                 }
             }
@@ -204,10 +225,33 @@ header
             .hd-cc
             {
                 max-height: 50px;
+                .hd-tl
+                {
+                    display: none;
+                }
                 .hd-sc
                 {
+                    display: flex;
                     justify-content: flex-end;
-                   
+                    .hd-mr
+                    {
+                        width: 83%;
+                        display: flex;
+                        justify-content: flex-end;
+                        a 
+                        {
+                            background: transparent;
+                            width: auto;
+                            padding: 0 20px ;
+                            font-size: 1.5rem;
+                            color: myColor(acent);
+                            font-weight: 500;
+                        }
+                        a:hover
+                        {
+                            color: myColor(hover);
+                        }
+                    }
                 }
                 .menu,.change
                 {
@@ -255,6 +299,11 @@ header
                                 transition: 0.5s;
                                 color: myColor(hover);
                             }
+                        }
+                        #con-link
+                        {
+                            display: block;
+                            cursor: pointer;
                         }
                     }
                 }

@@ -110,28 +110,25 @@ footer
         .ft-by-bm
         {
             width: 90%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
             padding: 5%;
             .ft-cr
             {
-                width: 100%;
                 p
                 {
                     color: myColor(font-3);
+                    text-align: center;
                     margin: 0;
                 }
             }
             .ft-ca
             {
-                width: 100%;
                 a 
                 {
                     p
                     {
                         color: myColor(font-3);
+                        text-align: center;
+
                     }
                     p:hover 
                     {
@@ -232,6 +229,7 @@ footer
             min-height: 20px;
             .ft-cr
             {
+                width: auto;
                 float: left;
                 p
                 {

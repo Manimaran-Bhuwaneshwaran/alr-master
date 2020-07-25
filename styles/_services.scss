@@ -26,6 +26,7 @@ main
                     margin: 5% 0;
                     button 
                     {
+                        width: 100%;
                         background: myColor(secondary);
                         border: 0;
                         padding: 10px 20px;
@@ -147,11 +148,16 @@ main
                 .new 
                 {
                     margin: 0 0 3% 0;
+                    button 
+                    {
+                        width: 250px;
+                        padding: 20px;
+                    }
                 }
                 .list
                 {
                     background: myColor(font-3);
-                    border: 1px solid myColor(secondary);
+                    border: 0;
                     border-bottom: 0;
                     border-radius: 5px 5px 0 0;
                     overflow: hidden;
@@ -187,12 +193,12 @@ main
                     border-top: 0;
                     padding: 5%;
                     border-radius: 0 0 5px 5px;
+                    border: 0;
                     .ser 
                     {
                         margin: 0;
                         padding:0;
                         border: 0;
-                        border-top: 0;
                         border-radius: 0 0 3px 3px;
                         overflow: hidden;
                         box-shadow:none;

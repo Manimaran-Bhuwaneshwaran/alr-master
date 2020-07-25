@@ -29,7 +29,8 @@ main
                         border-radius: 5px;
                         text-align: center;
                         justify-content: center;
-                        width: 100%;                      
+                        width: 90%;
+                        padding: 5%;                      
                         p
                         {
                             text-align: center;
@@ -91,7 +92,7 @@ main
         .clients
         {
             width: 100%;  
-            margin: 100px 0;                 
+            margin: 100px 0 0 0;                 
             section
             {
                 width: 100%;
@@ -108,8 +109,9 @@ main
                         border-radius: 5px;
                         text-align: center;
                         justify-content: center;
-                        width: 200px;   
-                        margin: 0 auto;                   
+                        width: 250px;   
+                        margin: 0 auto; 
+                        padding: 20px;                  
                         p
                         {
                             text-align: center;

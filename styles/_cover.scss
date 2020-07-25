@@ -65,10 +65,10 @@ main
                         }
                         a 
                         {
-                           
-                            background: myColor(font-3);
+                           border: 1px solid myColor(font-3);
+                            background: transparent;
                             padding: 10px;
-                            color: myColor(acent);
+                            color: myColor(font-3);
                             font-weight: 700;
                             cursor: pointer;
                         }
@@ -177,10 +177,7 @@ main
                         }
                         a 
                         {
-                           
-                            background: myColor(font-3);
                             padding: 10px;
-                            color: myColor(acent);
                             font-weight: 400;
                             font-size: 1.5rem;
                         }
